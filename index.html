@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario con Bootstrap</title>
+        <!-- Enlace a Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="prueba.js"></script>
+
+    </head>
+    <body>
+        <div class="container mt-5 bg-danger">
+            <h2>Formulario con Bootstrap</h2>
+            <form class="row">
+                <div class="col-md-4 offset-md-12">
+                    <label for="input1">Email</label>
+                    <input type="text" class="form-control" id="Email" placeholder="example@Email.com">
+                </div>
+                    <div class="col-md-4">
+                        <label for="input2">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Password">
+                    </div>
+                <div class="col-md-4 offset-md-8">
+                    <button type="button" id="Enviar" class="btn btn-primary btn-block" onclick="open()">Enviar</button>
+
+                    <script>function open() {
+                        const crypto = require('crypto');
+                        const sha256 = require('js-sha256');
+                        const currentUrl = window.location.href;
+                        const parsedUrl= (new URL(currentUrl)).origin;
+
+                        const email = document.getElementById("Email").value;
+                        const password = document.getElementById("Password").value; // obtener la contraseñal y generar un SHA256
+                        passwordHash = sha256(password);
+
+                        
+                        window.location.href= (parsedUrl + "?email=" + email +"&password=" + passwordHash); //cambiar la pestania actual a...
+                    }</script>
+                </div>
+            </form>
+            <h1> Valores enviados:</h1>
+
+            <div>
+                Email: <strong><%= email %></strong>
+            </div>
+            <div>
+                Contraseña: <strong><%= password %></strong>
+            </div>
+        </div>
+
+        <!-- Scripts de Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
