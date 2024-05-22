@@ -11,6 +11,9 @@ app.get('/', function (req, res) {
     password = req.query.password;
 
     const filePath = path.join(__dirname, 'pagina/index.html'); // Ruta al archivo HTML
+    console.log(req.url);
+    console.log("email: " + email);
+    console.log("password: " + password);
     res.render(filePath, { email: email, password: password });
 })
 

@@ -8,24 +8,23 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script> <!-- SHA264 -->
         <script type="text/javascript" src="/pagina/prueba.js"></script>
-
     </head>
     <body>
         <div class="container mt-5 bg-danger">
-            <h2>Formulario con Bootstrap</h2>
-            <form class="row">
+            <h2 onclick="openYoutube()">Formulario con Bootstrap</h2>
+            <form class="row" method="get">
                 <div class="col-md-4 offset-md-12">
                     <label for="input1">Email</label>
-                    <input type="text" class="form-control" id="Email" placeholder="example@Email.com">
+                    <input type="text" class="form-control" id="Email" name="email" placeholder="example@Email.com">
                 </div>
-                    <div class="col-md-4">
-                        <label for="input2">Password</label>
-                        <input type="password" class="form-control" id="Password" placeholder="Password">
-                    </div>
+                <div class="col-md-4">
+                    <label for="input2">Password</label>
+                    <input type="password" class="form-control" id="Password" name="password" placeholder="Password">
+                </div>
                 <div class="col-md-4 offset-md-8">
-                    <button type="button" id="Enviar" class="btn btn-primary btn-block" onclick="openWithData()">Enviar</button>
+                    <!-- <button type="button" id="Enviar" class="btn btn-primary btn-block" onclick="openWithData()">Enviar</button> -->
                     
-                    <!-- <button type="submit" id="Enviar" class="btn btn-primary btn-block" onclick="openWithData()">Enviar</button> -->
+                    <button type="submit" id="Enviar" class="btn btn-primary btn-block">Enviar</button>
                 </div>
             </form>
             <h1>Valores enviados:</h1>
