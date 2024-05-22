@@ -10,9 +10,17 @@ app.get('/', function (req, res) {
     email = req.query.email;
     password = req.query.password;
 
-    const filePath = path.join(__dirname, 'index.html'); // Ruta al archivo HTML
+    const filePath = path.join(__dirname, 'pagina/index.html'); // Ruta al archivo HTML
     res.render(filePath, { email: email, password: password });
 })
+
+app.get('/pagina/prueba.js', function(req, res){
+    res.sendFile(__dirname + '/pagina/prueba.js');
+});
+
+app.post('/login', (req, res) => {
+    // Code to handle form data from the login form
+});
 
 app.listen(port, function () {
     console.log(`Example app listening on port ${port}`)

@@ -6,7 +6,8 @@
         <title>Formulario con Bootstrap</title>
         <!-- Enlace a Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="prueba.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script> <!-- SHA264 -->
+        <script type="text/javascript" src="/pagina/prueba.js"></script>
 
     </head>
     <body>
@@ -22,24 +23,12 @@
                         <input type="password" class="form-control" id="Password" placeholder="Password">
                     </div>
                 <div class="col-md-4 offset-md-8">
-                    <button type="button" id="Enviar" class="btn btn-primary btn-block" onclick="open()">Enviar</button>
-
-                    <script>function open() {
-                        const crypto = require('crypto');
-                        const sha256 = require('js-sha256');
-                        const currentUrl = window.location.href;
-                        const parsedUrl= (new URL(currentUrl)).origin;
-
-                        const email = document.getElementById("Email").value;
-                        const password = document.getElementById("Password").value; // obtener la contraseñal y generar un SHA256
-                        passwordHash = sha256(password);
-
-                        
-                        window.location.href= (parsedUrl + "?email=" + email +"&password=" + passwordHash); //cambiar la pestania actual a...
-                    }</script>
+                    <button type="button" id="Enviar" class="btn btn-primary btn-block" onclick="openWithData()">Enviar</button>
+                    
+                    <!-- <button type="submit" id="Enviar" class="btn btn-primary btn-block" onclick="openWithData()">Enviar</button> -->
                 </div>
             </form>
-            <h1> Valores enviados:</h1>
+            <h1>Valores enviados:</h1>
 
             <div>
                 Email: <strong><%= email %></strong>
