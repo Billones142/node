@@ -1,15 +1,23 @@
 {
-  "name": "prueba",
+  "name": "nombre-del-proyecto",
   "version": "1.0.0",
-  "description": "prueba con express",
+  "description": "Una breve descripción de tu proyecto",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'No build step necessary for Express app'"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.19.2"
-  }
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [],
+  "author": "Tu Nombre",
+  "license": "MIT"
 }
