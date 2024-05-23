@@ -13,7 +13,7 @@
     "ejs": "^3.1.6"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=19.0.0"
   },
   "keywords": ["express", "node", "vercel", "ejs"],
   "author": "Stefano Merino",
