@@ -21,6 +21,10 @@ app.get('/pagina/prueba.js', function(req, res){
     res.sendFile(__dirname + '/pagina/prueba.js');
 });
 
+app.get('/pagina/favicon.ico', function(req, res){
+    res.sendFile(__dirname + '/pagina/favicon.ico');
+});
+
 app.post('/login', (req, res) => {
     // Code to handle form data from the login form
 });
