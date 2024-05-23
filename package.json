@@ -4,7 +4,8 @@
   "description": "Una breve descripción de tu proyecto",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
+    "dev": "nodemon server.js",
     "build": "echo 'No build step necessary for Express app'"
   },
   "dependencies": {
